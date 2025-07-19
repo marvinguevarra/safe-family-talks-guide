@@ -2,95 +2,122 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Together We Talk - Privacy-First Family Support App Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Warm, calming color palette for family support */
+    --background: 44 50% 97%;  /* Cream background #FFF5E4 */
+    --foreground: 220 30% 20%; /* Dark text for readability */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 30% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 30% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Sky Blue primary - calming and trustworthy */
+    --primary: 195 53% 79%;     /* Sky Blue #87CEEB */
+    --primary-foreground: 220 30% 20%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm Coral secondary - welcoming */
+    --secondary: 3 100% 70%;    /* Warm Coral #FF6B6B */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Sage Green for success/safety */
+    --sage: 162 69% 71%;        /* Sage Green #95E1D3 */
+    --sage-foreground: 220 30% 20%;
+
+    /* Soft Purple for gentle emphasis */
+    --purple: 265 56% 81%;      /* Soft Purple #C7B8EA */
+    --purple-foreground: 220 30% 20%;
+
+    /* Sunshine for positivity */
+    --sunshine: 50 100% 62%;    /* Sunshine #FFD93D */
+    --sunshine-foreground: 220 30% 20%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 162 69% 71%;      /* Using sage as accent */
+    --accent-foreground: 220 30% 20%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 3 100% 70%;   /* Using coral for warnings */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 210 20% 90%;
+    --input: 210 20% 95%;
+    --ring: 195 53% 79%;
 
-    --radius: 0.5rem;
+    --radius: 1.25rem;  /* 20px rounded corners */
 
-    --sidebar-background: 0 0% 98%;
+    /* Quick Exit button - always accessible */
+    --exit-bg: 0 84% 50%;       /* Emergency red */
+    --exit-fg: 0 0% 100%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients for depth and warmth */
+    --gradient-warm: linear-gradient(135deg, hsl(195 53% 79%), hsl(162 69% 71%));
+    --gradient-sunset: linear-gradient(135deg, hsl(3 100% 70%), hsl(50 100% 62%));
+    --gradient-gentle: linear-gradient(180deg, hsl(44 50% 97%), hsl(210 40% 96%));
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows for cards */
+    --shadow-soft: 0 4px 20px -4px hsl(195 53% 79% / 0.15);
+    --shadow-hover: 0 8px 30px -6px hsl(195 53% 79% / 0.25);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Typography */
+    --font-size-base: 1.125rem;  /* 18px base for readability */
+    --font-size-large: 1.25rem;  /* 20px */
+    --font-size-xl: 1.5rem;      /* 24px */
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Animations */
+    --transition-gentle: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-quick: all 0.15s ease-out;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 30% 10%;
+    --foreground: 44 50% 97%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 30% 15%;
+    --card-foreground: 44 50% 97%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 30% 15%;
+    --popover-foreground: 44 50% 97%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 195 53% 79%;
+    --primary-foreground: 220 30% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 3 100% 70%;
+    --secondary-foreground: 220 30% 10%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --sage: 162 69% 71%;
+    --sage-foreground: 220 30% 10%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --purple: 265 56% 81%;
+    --purple-foreground: 220 30% 10%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --sunshine: 50 100% 62%;
+    --sunshine-foreground: 220 30% 10%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --muted: 220 30% 20%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: 162 69% 71%;
+    --accent-foreground: 220 30% 10%;
+
+    --destructive: 3 100% 70%;
+    --destructive-foreground: 220 30% 10%;
+
+    --border: 220 30% 25%;
+    --input: 220 30% 20%;
+    --ring: 195 53% 79%;
+
+    --gradient-warm: linear-gradient(135deg, hsl(195 53% 50%), hsl(162 69% 50%));
+    --gradient-sunset: linear-gradient(135deg, hsl(3 100% 50%), hsl(50 100% 45%));
+    --gradient-gentle: linear-gradient(180deg, hsl(220 30% 10%), hsl(220 30% 15%));
+
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-hover: 0 8px 30px -6px hsl(0 0% 0% / 0.4);
   }
 }
 
@@ -100,6 +127,114 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-foreground;
+  }
+
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.75rem; }
+  h4 { font-size: 1.5rem; }
+}
+
+@layer components {
+  /* Navigation Cards */
+  .nav-card {
+    @apply bg-card border border-border rounded-[20px] p-6 transition-all duration-300;
+    @apply hover:shadow-lg hover:-translate-y-1;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .nav-card:hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  /* Quick Exit Button - Critical Safety Feature */
+  .quick-exit {
+    @apply fixed top-4 right-4 z-50 px-4 py-2 rounded-full font-semibold text-sm;
+    @apply transition-all duration-200 hover:scale-105;
+    background: hsl(var(--exit-bg));
+    color: hsl(var(--exit-fg));
+    box-shadow: 0 4px 15px -3px hsl(0 84% 50% / 0.4);
+  }
+
+  /* Accessibility Button */
+  .accessibility-trigger {
+    @apply fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full;
+    @apply flex items-center justify-center transition-all duration-300;
+    @apply hover:scale-110 focus:outline-none focus:ring-4;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* Content Cards */
+  .content-card {
+    @apply bg-card border border-border rounded-[20px] p-6 mb-6;
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* Button Variants */
+  .btn-primary {
+    @apply px-6 py-3 rounded-[20px] font-semibold transition-all duration-200;
+    @apply hover:scale-105 focus:outline-none focus:ring-4;
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-[20px] font-semibold transition-all duration-200;
+    @apply hover:scale-105 focus:outline-none focus:ring-4;
+    background: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+  }
+
+  .btn-sage {
+    @apply px-6 py-3 rounded-[20px] font-semibold transition-all duration-200;
+    @apply hover:scale-105 focus:outline-none focus:ring-4;
+    background: hsl(var(--sage));
+    color: hsl(var(--sage-foreground));
+  }
+
+  /* Print Styles */
+  @media print {
+    .quick-exit,
+    .accessibility-trigger,
+    .no-print {
+      display: none !important;
+    }
+    
+    .nav-card,
+    .content-card {
+      break-inside: avoid;
+      box-shadow: none;
+      border: 1px solid #ddd;
+    }
+    
+    body {
+      background: white;
+      font-size: 12pt;
+      line-height: 1.4;
+    }
+  }
+
+  /* Language Toggle */
+  .language-toggle {
+    @apply flex items-center gap-2 px-4 py-2 rounded-full border-2;
+    @apply transition-all duration-200 hover:scale-105;
+    border-color: hsl(var(--primary));
+    background: hsl(var(--background));
+  }
+
+  /* Disclaimer */
+  .disclaimer {
+    @apply p-4 rounded-[20px] border-2 border-dashed mb-6;
+    border-color: hsl(var(--secondary));
+    background: hsl(var(--secondary) / 0.1);
   }
 }

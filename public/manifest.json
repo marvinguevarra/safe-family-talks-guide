@@ -1,0 +1,29 @@
+{
+  "name": "Together We Talk - Family Safety Guide",
+  "short_name": "Family Safety",
+  "description": "A privacy-first guide for families navigating difficult conversations about immigration and detention",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF5E4",
+  "theme_color": "#87CEEB",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png", 
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "lifestyle", "social"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false
+}

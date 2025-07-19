@@ -67,7 +67,33 @@
         <p>
             <strong>Privacy Note:</strong> This app works completely offline and collects no personal data.
         </p>
-        <a href="/" class="button">Return to Home</a>
+        <button onclick="goHome()" class="button">Return to Home</button>
     </div>
+    
+    <script>
+        function goHome() {
+            // Try to navigate to cached homepage
+            if ('caches' in window) {
+                caches.match('/').then(function(response) {
+                    if (response) {
+                        window.location.href = '/';
+                    } else {
+                        // If not cached, show message
+                        alert('Please visit the main site while online first to cache it for offline use.');
+                    }
+                });
+            } else {
+                // Fallback for browsers without cache API
+                window.location.href = '/';
+            }
+        }
+        
+        // Auto-retry connection every 30 seconds
+        setInterval(function() {
+            if (navigator.onLine) {
+                window.location.href = '/';
+            }
+        }, 30000);
+    </script>
 </body>
 </html>

@@ -7,9 +7,14 @@ const OFFLINE_URL = '/offline.html';
 // Files to cache for offline functionality
 const STATIC_ASSETS = [
   '/',
-  '/manifest.json',
+  '/manifest.json', 
   '/offline.html',
-  // Add all static assets here
+  '/assets/index.css',
+  '/assets/index.js',
+  // Main app routes that should work offline
+  '/young-children',
+  '/elementary', 
+  '/teens'
 ];
 
 // Install event - cache static assets

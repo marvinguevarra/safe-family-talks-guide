@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface NavigationCardProps {
   title: string;
@@ -36,15 +37,15 @@ export const NavigationCard = ({
 };
 
 interface NavigationLinkProps {
-  href: string;
+  to: string;
   children: ReactNode;
   ageGroup?: string;
 }
 
-export const NavigationLink = ({ href, children, ageGroup }: NavigationLinkProps) => {
+export const NavigationLink = ({ to, children, ageGroup }: NavigationLinkProps) => {
   return (
-    <a
-      href={href}
+    <Link
+      to={to}
       className="flex items-center justify-between p-3 bg-white/50 dark:bg-black/10 rounded-[15px] hover:bg-white/70 dark:hover:bg-black/20 transition-all duration-200 group"
     >
       <div className="flex items-center gap-3">
@@ -56,6 +57,6 @@ export const NavigationLink = ({ href, children, ageGroup }: NavigationLinkProps
         )}
       </div>
       <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
-    </a>
+    </Link>
   );
 };

@@ -43,13 +43,13 @@ const Index = () => {
             emoji="👨‍👩‍👧‍👦"
             bgGradient="bg-gradient-warm"
           >
-            <NavigationLink href="/young-children" ageGroup="Ages 4-7">
+            <NavigationLink to="/young-children" ageGroup="Ages 4-7">
               Little Ones
             </NavigationLink>
-            <NavigationLink href="/elementary" ageGroup="Ages 8-11">
+            <NavigationLink to="/elementary" ageGroup="Ages 8-11">
               Elementary Age
             </NavigationLink>
-            <NavigationLink href="/teens" ageGroup="Ages 12+">
+            <NavigationLink to="/teens" ageGroup="Ages 12+">
               Teenagers
             </NavigationLink>
           </NavigationCard>
@@ -61,13 +61,13 @@ const Index = () => {
             emoji="💬"
             bgGradient="bg-gradient-sunset"
           >
-            <NavigationLink href="/talk-to-parents">
+            <NavigationLink to="/talk-to-parents">
               Parents & Grandparents
             </NavigationLink>
-            <NavigationLink href="/talk-to-siblings">
+            <NavigationLink to="/talk-to-siblings">
               Brothers & Sisters
             </NavigationLink>
-            <NavigationLink href="/talk-to-extended-family">
+            <NavigationLink to="/talk-to-extended-family">
               Extended Family
             </NavigationLink>
           </NavigationCard>
@@ -79,14 +79,14 @@ const Index = () => {
             emoji="🆘"
             bgGradient="bg-card"
           >
-            <NavigationLink href="/find-detained">
+            <NavigationLink to="/find-detained">
               <AlertTriangle size={16} className="inline mr-2" />
               Find Them
             </NavigationLink>
-            <NavigationLink href="/get-legal-help">
+            <NavigationLink to="/get-legal-help">
               Get Legal Help
             </NavigationLink>
-            <NavigationLink href="/detention-rights">
+            <NavigationLink to="/detention-rights">
               Know Your Rights
             </NavigationLink>
           </NavigationCard>
@@ -98,17 +98,17 @@ const Index = () => {
             emoji="🛡️"
             bgGradient="bg-sage/20"
           >
-            <NavigationLink href="/safety-planning">
+            <NavigationLink to="/safety-planning">
               <Shield size={16} className="inline mr-2" />
               Make a Safety Plan
             </NavigationLink>
-            <NavigationLink href="/know-your-rights">
+            <NavigationLink to="/know-your-rights">
               Know Your Rights
             </NavigationLink>
-            <NavigationLink href="/educators">
+            <NavigationLink to="/educators">
               Talk to Teachers
             </NavigationLink>
-            <NavigationLink href="/allies">
+            <NavigationLink to="/allies">
               Find Community Support
             </NavigationLink>
           </NavigationCard>

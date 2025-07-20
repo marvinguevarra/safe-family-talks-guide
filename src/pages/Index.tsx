@@ -13,7 +13,7 @@ const Index = () => {
       <AccessibilityPanel />
 
       {/* Header */}
-      <header className="container mx-auto px-4 pt-8 pb-6">
+      <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-sm border-b border-border/10 container mx-auto px-4 pt-8 pb-6">
         <div className="flex justify-between items-center mb-6">
           <div className="flex items-center gap-3">
             <Heart className="text-secondary" size={32} />

@@ -222,6 +222,29 @@
   .dyslexia-font {
     font-family: 'Comic Sans MS', 'Trebuchet MS', 'Verdana', cursive, sans-serif;
   }
+
+  /* Reduced Animations for Crisis Support */
+  .reduce-animations,
+  .reduce-animations * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transform: none !important;
+  }
+
+  .reduce-animations .nav-card:hover {
+    transform: none !important;
+  }
+
+  .reduce-animations .quick-exit:hover,
+  .reduce-animations .accessibility-trigger:hover,
+  .reduce-animations .btn-primary:hover,
+  .reduce-animations .btn-secondary:hover,
+  .reduce-animations .btn-sage:hover,
+  .reduce-animations .language-toggle:hover {
+    transform: none !important;
+    scale: 1 !important;
+  }
 }
 
 @layer components {

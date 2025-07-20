@@ -11,7 +11,8 @@ export const AccessibilityPanel = () => {
     lineSpacing: "normal",
     dyslexiaFont: false,
     readAloud: false,
-    readingSpeed: 1
+    readingSpeed: 1,
+    reduceAnimations: true // Default to true for crisis support app
   });
 
   // Initialize default settings on component mount
@@ -45,6 +46,13 @@ export const AccessibilityPanel = () => {
     // Apply line spacing
     root.classList.remove('spacing-normal', 'spacing-relaxed', 'spacing-loose');
     root.classList.add(`spacing-${settings.lineSpacing}`);
+
+    // Apply reduced animations
+    if (settings.reduceAnimations) {
+      root.classList.add('reduce-animations');
+    } else {
+      root.classList.remove('reduce-animations');
+    }
   }, [settings]);
 
   const updateSetting = (key: string, value: any) => {
@@ -63,14 +71,15 @@ export const AccessibilityPanel = () => {
       lineSpacing: "normal",
       dyslexiaFont: false,
       readAloud: false,
-      readingSpeed: 1
+      readingSpeed: 1,
+      reduceAnimations: true // Keep as default for crisis support
     });
     // Remove all accessibility classes
     const root = document.documentElement;
     root.classList.remove('high-contrast', 'dyslexia-font', 
       'font-small', 'font-medium', 'font-large', 'font-extra-large',
-      'spacing-normal', 'spacing-relaxed', 'spacing-loose');
-    root.classList.add('font-medium', 'spacing-normal');
+      'spacing-normal', 'spacing-relaxed', 'spacing-loose', 'reduce-animations');
+    root.classList.add('font-medium', 'spacing-normal', 'reduce-animations');
   };
 
   return (
@@ -185,19 +194,33 @@ export const AccessibilityPanel = () => {
                     </div>
                   </div>
 
-                  <label className="flex items-center justify-between">
-                    <span>Dyslexia-friendly Font</span>
-                    <button
-                      onClick={() => updateSetting("dyslexiaFont", !settings.dyslexiaFont)}
-                      className={`w-12 h-6 rounded-full transition-all duration-200 ${
-                        settings.dyslexiaFont ? "bg-primary" : "bg-muted"
-                      }`}
-                    >
-                      <div className={`w-5 h-5 bg-white rounded-full transition-transform duration-200 ${
-                        settings.dyslexiaFont ? "translate-x-7" : "translate-x-1"
-                      } mt-0.5`} />
-                    </button>
-                  </label>
+                   <label className="flex items-center justify-between">
+                     <span>Dyslexia-friendly Font</span>
+                     <button
+                       onClick={() => updateSetting("dyslexiaFont", !settings.dyslexiaFont)}
+                       className={`w-12 h-6 rounded-full transition-all duration-200 ${
+                         settings.dyslexiaFont ? "bg-primary" : "bg-muted"
+                       }`}
+                     >
+                       <div className={`w-5 h-5 bg-white rounded-full transition-transform duration-200 ${
+                         settings.dyslexiaFont ? "translate-x-7" : "translate-x-1"
+                       } mt-0.5`} />
+                     </button>
+                   </label>
+
+                   <label className="flex items-center justify-between">
+                     <span>Reduce Animations</span>
+                     <button
+                       onClick={() => updateSetting("reduceAnimations", !settings.reduceAnimations)}
+                       className={`w-12 h-6 rounded-full transition-all duration-200 ${
+                         settings.reduceAnimations ? "bg-primary" : "bg-muted"
+                       }`}
+                     >
+                       <div className={`w-5 h-5 bg-white rounded-full transition-transform duration-200 ${
+                         settings.reduceAnimations ? "translate-x-7" : "translate-x-1"
+                       } mt-0.5`} />
+                     </button>
+                   </label>
                 </div>
               </section>
 

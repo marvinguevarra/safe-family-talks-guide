@@ -24,7 +24,7 @@ const SafetyPlanning = () => {
             <div className="text-4xl">🛡️</div>
             <div>
               <h1 className="text-3xl font-bold">Family Safety Planning</h1>
-              <p className="text-muted-foreground">Prepare your family for unexpected situations</p>
+              <p className="text-foreground/70 font-medium">Prepare your family for unexpected situations</p>
             </div>
           </div>
 

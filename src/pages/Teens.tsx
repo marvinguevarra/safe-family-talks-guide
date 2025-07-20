@@ -23,7 +23,7 @@ const Teens = () => {
             <div className="text-4xl">🎓</div>
             <div>
               <h1 className="text-3xl font-bold">Talking to Teenagers</h1>
-              <p className="text-muted-foreground">Ages 12+</p>
+              <p className="text-foreground/70 font-medium">Ages 12+</p>
             </div>
           </div>
 

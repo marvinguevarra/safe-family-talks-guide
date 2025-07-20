@@ -24,7 +24,7 @@ const FamilyConversations = () => {
             <div className="text-4xl">💬</div>
             <div>
               <h1 className="text-3xl font-bold">Family Conversations</h1>
-              <p className="text-muted-foreground">Start important discussions with confidence</p>
+              <p className="text-foreground/70 font-medium">Start important discussions with confidence</p>
             </div>
           </div>
 

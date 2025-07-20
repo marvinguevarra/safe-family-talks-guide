@@ -23,7 +23,7 @@ const Elementary = () => {
             <div className="text-4xl">🎒</div>
             <div>
               <h1 className="text-3xl font-bold">Talking to Elementary Age Children</h1>
-              <p className="text-muted-foreground">Ages 8-11</p>
+              <p className="text-foreground/70 font-medium">Ages 8-11</p>
             </div>
           </div>
 

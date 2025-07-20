@@ -24,7 +24,7 @@ const FindDetained = () => {
             <div className="text-4xl">🔍</div>
             <div>
               <h1 className="text-3xl font-bold">Find Someone Who Was Detained</h1>
-              <p className="text-muted-foreground">Immediate steps to locate a detained family member</p>
+              <p className="text-foreground/70 font-medium">Immediate steps to locate a detained family member</p>
             </div>
           </div>
 
@@ -87,19 +87,19 @@ const FindDetained = () => {
                 <div className="bg-card border p-4 rounded-lg">
                   <h3 className="font-semibold mb-2">ICE Detention & Removal</h3>
                   <p className="text-2xl font-bold text-primary">1-888-351-4024</p>
-                  <p className="text-sm text-muted-foreground">24/7 hotline to locate detained individuals</p>
+                  <p className="text-sm text-foreground/70 font-medium">24/7 hotline to locate detained individuals</p>
                 </div>
 
                 <div className="bg-card border p-4 rounded-lg">
                   <h3 className="font-semibold mb-2">Legal Aid Hotline</h3>
                   <p className="text-2xl font-bold text-secondary">1-800-354-0365</p>
-                  <p className="text-sm text-muted-foreground">Free legal assistance referrals</p>
+                  <p className="text-sm text-foreground/70 font-medium">Free legal assistance referrals</p>
                 </div>
 
                 <div className="bg-card border p-4 rounded-lg">
                   <h3 className="font-semibold mb-2">ACLU Immigrants' Rights</h3>
                   <p className="text-2xl font-bold text-sage">1-212-549-2500</p>
-                  <p className="text-sm text-muted-foreground">Know your rights information</p>
+                  <p className="text-sm text-foreground/70 font-medium">Know your rights information</p>
                 </div>
               </div>
             </section>

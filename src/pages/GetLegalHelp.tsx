@@ -24,7 +24,7 @@ const GetLegalHelp = () => {
             <div className="text-4xl">⚖️</div>
             <div>
               <h1 className="text-3xl font-bold">Get Legal Help</h1>
-              <p className="text-muted-foreground">Finding and working with immigration attorneys</p>
+              <p className="text-foreground/70 font-medium">Finding and working with immigration attorneys</p>
             </div>
           </div>
 
@@ -52,19 +52,19 @@ const GetLegalHelp = () => {
                 <div className="bg-card border p-4 rounded-lg">
                   <h3 className="font-semibold mb-2">National Immigration Law Center</h3>
                   <p className="text-xl font-bold text-primary">1-213-639-3900</p>
-                  <p className="text-sm text-muted-foreground">Free consultations and referrals nationwide</p>
+                  <p className="text-sm text-foreground/70 font-medium">Free consultations and referrals nationwide</p>
                 </div>
 
                 <div className="bg-card border p-4 rounded-lg">
                   <h3 className="font-semibold mb-2">American Immigration Lawyers Association</h3>
                   <p className="text-xl font-bold text-secondary">aila.org/lawyer-referral</p>
-                  <p className="text-sm text-muted-foreground">Find qualified immigration attorneys by location</p>
+                  <p className="text-sm text-foreground/70 font-medium">Find qualified immigration attorneys by location</p>
                 </div>
 
                 <div className="bg-card border p-4 rounded-lg">
                   <h3 className="font-semibold mb-2">Legal Aid Organizations</h3>
                   <p className="text-xl font-bold text-sage">1-800-354-0365</p>
-                  <p className="text-sm text-muted-foreground">Free legal services for low-income families</p>
+                  <p className="text-sm text-foreground/70 font-medium">Free legal services for low-income families</p>
                 </div>
               </div>
             </section>

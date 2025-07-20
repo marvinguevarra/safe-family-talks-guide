@@ -28,7 +28,7 @@ export const Layout = ({ children }: LayoutProps) => {
             <LanguageToggle />
           </div>
           
-          <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto">
+          <p className="text-lg text-foreground/80 text-center max-w-2xl mx-auto font-medium">
             A safe space for families to navigate difficult conversations with love, 
             understanding, and practical guidance.
           </p>

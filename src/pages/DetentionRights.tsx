@@ -1,16 +1,10 @@
 
 import { ArrowLeft, Shield, Phone, FileText, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-import { QuickExit } from "@/components/QuickExit";
-import { AccessibilityPanel } from "@/components/AccessibilityPanel";
 
 const DetentionRights = () => {
   return (
-    <div className="min-h-screen bg-gradient-gentle">
-      <QuickExit />
-      <AccessibilityPanel />
-      
-      <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8">
         <Link 
           to="/" 
           className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-6"
@@ -24,7 +18,7 @@ const DetentionRights = () => {
             <div className="text-4xl">🛡️</div>
             <div>
               <h1 className="text-3xl font-bold">Your Rights in Detention</h1>
-              <p className="text-muted-foreground">Important legal protections everyone should know</p>
+              <p className="text-foreground/70 font-medium">Important legal protections everyone should know</p>
             </div>
           </div>
 
@@ -184,7 +178,6 @@ const DetentionRights = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

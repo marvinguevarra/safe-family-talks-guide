@@ -36,8 +36,8 @@
     --sunshine: 50 100% 62%;    /* Sunshine #FFD93D */
     --sunshine-foreground: 220 30% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 92%;
+    --muted-foreground: 215.4 16.3% 35%; /* Darker for WCAG compliance */
 
     --accent: 162 69% 71%;      /* Using sage as accent */
     --accent-foreground: 220 30% 20%;
@@ -99,8 +99,8 @@
     --sunshine: 50 100% 62%;
     --sunshine-foreground: 220 30% 10%;
 
-    --muted: 220 30% 20%;
-    --muted-foreground: 210 20% 70%;
+    --muted: 220 30% 25%;
+    --muted-foreground: 210 20% 80%; /* Lighter for dark mode contrast */
 
     --accent: 162 69% 71%;
     --accent-foreground: 220 30% 10%;

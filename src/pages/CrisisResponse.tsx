@@ -24,7 +24,7 @@ const CrisisResponse = () => {
             <div className="text-4xl">🚨</div>
             <div>
               <h1 className="text-3xl font-bold">Crisis Response</h1>
-              <p className="text-muted-foreground">Immediate help when you need it most</p>
+              <p className="text-foreground/70 font-medium">Immediate help when you need it most</p>
             </div>
           </div>
 
@@ -69,25 +69,25 @@ const CrisisResponse = () => {
                 <div className="bg-card border p-4 rounded-lg">
                   <h3 className="font-semibold mb-2 text-primary">National Domestic Violence Hotline</h3>
                   <p className="text-2xl font-bold mb-2">1-800-799-7233</p>
-                  <p className="text-sm text-muted-foreground">Free, confidential support 24/7. Available in multiple languages.</p>
+                  <p className="text-sm text-foreground/70 font-medium">Free, confidential support 24/7. Available in multiple languages.</p>
                 </div>
 
                 <div className="bg-card border p-4 rounded-lg">
                   <h3 className="font-semibold mb-2 text-secondary">National Suicide Prevention Lifeline</h3>
                   <p className="text-2xl font-bold mb-2">988</p>
-                  <p className="text-sm text-muted-foreground">Crisis counseling and suicide prevention. Available 24/7 in English and Spanish.</p>
+                  <p className="text-sm text-foreground/70 font-medium">Crisis counseling and suicide prevention. Available 24/7 in English and Spanish.</p>
                 </div>
 
                 <div className="bg-card border p-4 rounded-lg">
                   <h3 className="font-semibold mb-2 text-sage">Crisis Text Line</h3>
                   <p className="text-2xl font-bold mb-2">Text HOME to 741741</p>
-                  <p className="text-sm text-muted-foreground">Free crisis support via text message. Available 24/7.</p>
+                  <p className="text-sm text-foreground/70 font-medium">Free crisis support via text message. Available 24/7.</p>
                 </div>
 
                 <div className="bg-card border p-4 rounded-lg">
                   <h3 className="font-semibold mb-2 text-purple">National Child Abuse Hotline</h3>
                   <p className="text-2xl font-bold mb-2">1-800-4-A-CHILD (1-800-422-4453)</p>
-                  <p className="text-sm text-muted-foreground">Professional crisis counselors available 24/7. Over 170 languages supported.</p>
+                  <p className="text-sm text-foreground/70 font-medium">Professional crisis counselors available 24/7. Over 170 languages supported.</p>
                 </div>
               </div>
             </section>

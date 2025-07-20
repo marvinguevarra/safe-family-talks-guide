@@ -23,7 +23,7 @@ const YoungChildren = () => {
             <div className="text-4xl">👶</div>
             <div>
               <h1 className="text-3xl font-bold">Talking to Little Ones</h1>
-              <p className="text-muted-foreground">Ages 4-7</p>
+              <p className="text-foreground/70 font-medium">Ages 4-7</p>
             </div>
           </div>
 

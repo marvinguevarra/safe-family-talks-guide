@@ -24,7 +24,7 @@ const Resources = () => {
             <div className="text-4xl">📚</div>
             <div>
               <h1 className="text-3xl font-bold">Resources & Support</h1>
-              <p className="text-muted-foreground">Comprehensive support for immigrant families</p>
+              <p className="text-foreground/70 font-medium">Comprehensive support for immigrant families</p>
             </div>
           </div>
 

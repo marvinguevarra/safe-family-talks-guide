@@ -18,14 +18,14 @@ export const NavigationCard = ({
   bgGradient = "bg-gradient-warm" 
 }: NavigationCardProps) => {
   return (
-    <div className={`nav-card ${bgGradient} hover:scale-105`}>
+    <div className={`nav-card ${bgGradient} hover:scale-105 text-white`}>
       <div className="flex items-start gap-4 mb-4">
         <div className="text-4xl" role="img" aria-label={title}>
           {emoji}
         </div>
         <div className="flex-1">
-          <h2 className="text-xl font-semibold mb-2">{title}</h2>
-          <p className="text-muted-foreground">{description}</p>
+          <h2 className="text-xl font-semibold mb-2 text-white">{title}</h2>
+          <p className="text-white/90 font-medium">{description}</p>
         </div>
       </div>
       
@@ -46,17 +46,17 @@ export const NavigationLink = ({ to, children, ageGroup }: NavigationLinkProps) 
   return (
     <Link
       to={to}
-      className="flex items-center justify-between p-3 bg-white/50 dark:bg-black/10 rounded-[15px] hover:bg-white/70 dark:hover:bg-black/20 transition-all duration-200 group"
+      className="flex items-center justify-between p-3 bg-white/90 dark:bg-black/60 rounded-[15px] hover:bg-white dark:hover:bg-black/80 transition-all duration-200 group text-foreground dark:text-white"
     >
       <div className="flex items-center gap-3">
-        <span className="font-medium">{children}</span>
+        <span className="font-semibold text-foreground dark:text-white">{children}</span>
         {ageGroup && (
-          <span className="text-xs bg-primary/20 text-primary px-2 py-1 rounded-full">
+          <span className="text-xs bg-black/20 dark:bg-white/20 text-foreground dark:text-white px-2 py-1 rounded-full font-medium">
             {ageGroup}
           </span>
         )}
       </div>
-      <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
+      <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform duration-200 text-foreground dark:text-white" />
     </Link>
   );
 };

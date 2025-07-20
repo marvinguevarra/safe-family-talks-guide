@@ -70,7 +70,7 @@ const Index = () => {
             title="Family Preparedness"
             description="Planning ahead to keep your family safe and informed"
             emoji="🛡️"
-            bgGradient="bg-sage/20"
+            bgGradient="bg-sage"
           >
             <NavigationLink to="/safety-planning">
               <Shield size={16} className="inline mr-2" />
@@ -113,13 +113,13 @@ const Index = () => {
         </div>
 
         {/* Installation Prompt */}
-        <div className="content-card bg-gradient-warm text-center">
-          <h3 className="text-xl font-semibold mb-3">📱 Use Offline</h3>
-          <p className="mb-4">
+        <div className="content-card bg-gradient-warm text-center text-white">
+          <h3 className="text-xl font-semibold mb-3 text-white">📱 Use Offline</h3>
+          <p className="mb-4 text-white/90 font-medium">
             Install this app on your phone for private, offline access anytime.
           </p>
           <button 
-            className="btn-primary"
+            className="bg-white text-black px-6 py-3 rounded-[20px] font-semibold hover:bg-white/90 transition-all duration-200"
             onClick={() => {
               // PWA install prompt will be handled by service worker
               alert("To install: tap your browser menu and select 'Add to Home Screen'");

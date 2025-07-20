@@ -25,12 +25,12 @@
     --secondary-foreground: 0 0% 100%;
 
     /* Sage Green for success/safety */
-    --sage: 162 69% 71%;        /* Sage Green #95E1D3 */
-    --sage-foreground: 220 30% 20%;
+    --sage: 162 69% 35%;        /* Darker Sage Green for proper contrast */
+    --sage-foreground: 0 0% 100%;
 
     /* Soft Purple for gentle emphasis */
-    --purple: 265 56% 81%;      /* Soft Purple #C7B8EA */
-    --purple-foreground: 220 30% 20%;
+    --purple: 265 56% 45%;      /* Darker Purple for proper contrast */
+    --purple-foreground: 0 0% 100%;
 
     /* Sunshine for positivity */
     --sunshine: 50 100% 62%;    /* Sunshine #FFD93D */
@@ -55,9 +55,9 @@
     --exit-bg: 0 84% 50%;       /* Emergency red */
     --exit-fg: 0 0% 100%;
 
-    /* Gradients for depth and warmth */
-    --gradient-warm: linear-gradient(135deg, hsl(195 53% 79%), hsl(162 69% 71%));
-    --gradient-sunset: linear-gradient(135deg, hsl(3 100% 70%), hsl(50 100% 62%));
+    /* WCAG 2.2 AA Compliant Gradients */
+    --gradient-warm: linear-gradient(135deg, hsl(195 53% 65%), hsl(162 69% 55%));
+    --gradient-sunset: linear-gradient(135deg, hsl(14 91% 60%), hsl(39 100% 55%));
     --gradient-gentle: linear-gradient(180deg, hsl(44 50% 97%), hsl(210 40% 96%));
 
     /* Shadows for cards */
@@ -112,8 +112,8 @@
     --input: 220 30% 20%;
     --ring: 195 53% 79%;
 
-    --gradient-warm: linear-gradient(135deg, hsl(195 53% 50%), hsl(162 69% 50%));
-    --gradient-sunset: linear-gradient(135deg, hsl(3 100% 50%), hsl(50 100% 45%));
+    --gradient-warm: linear-gradient(135deg, hsl(195 53% 40%), hsl(162 69% 35%));
+    --gradient-sunset: linear-gradient(135deg, hsl(14 91% 45%), hsl(39 100% 40%));
     --gradient-gentle: linear-gradient(180deg, hsl(220 30% 10%), hsl(220 30% 15%));
 
     --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);

@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
+import { Layout } from "./components/Layout";
 import Index from "./pages/Index";
 import YoungChildren from "./pages/YoungChildren";
 import Elementary from "./pages/Elementary";
@@ -27,21 +28,23 @@ const App = () => (
         <Toaster />
         <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/young-children" element={<YoungChildren />} />
-          <Route path="/elementary" element={<Elementary />} />
-          <Route path="/teens" element={<Teens />} />
-          <Route path="/find-detained" element={<FindDetained />} />
-          <Route path="/get-legal-help" element={<GetLegalHelp />} />
-          <Route path="/detention-rights" element={<DetentionRights />} />
-          <Route path="/safety-planning" element={<SafetyPlanning />} />
-          <Route path="/crisis-response" element={<CrisisResponse />} />
-          <Route path="/family-conversations" element={<FamilyConversations />} />
-          <Route path="/resources" element={<Resources />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/young-children" element={<YoungChildren />} />
+            <Route path="/elementary" element={<Elementary />} />
+            <Route path="/teens" element={<Teens />} />
+            <Route path="/find-detained" element={<FindDetained />} />
+            <Route path="/get-legal-help" element={<GetLegalHelp />} />
+            <Route path="/detention-rights" element={<DetentionRights />} />
+            <Route path="/safety-planning" element={<SafetyPlanning />} />
+            <Route path="/crisis-response" element={<CrisisResponse />} />
+            <Route path="/family-conversations" element={<FamilyConversations />} />
+            <Route path="/resources" element={<Resources />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
       </BrowserRouter>
     </TooltipProvider>
     </ThemeProvider>

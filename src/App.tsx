@@ -11,6 +11,10 @@ import Teens from "./pages/Teens";
 import FindDetained from "./pages/FindDetained";
 import GetLegalHelp from "./pages/GetLegalHelp";
 import DetentionRights from "./pages/DetentionRights";
+import SafetyPlanning from "./pages/SafetyPlanning";
+import CrisisResponse from "./pages/CrisisResponse";
+import FamilyConversations from "./pages/FamilyConversations";
+import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +33,10 @@ const App = () => (
           <Route path="/find-detained" element={<FindDetained />} />
           <Route path="/get-legal-help" element={<GetLegalHelp />} />
           <Route path="/detention-rights" element={<DetentionRights />} />
+          <Route path="/safety-planning" element={<SafetyPlanning />} />
+          <Route path="/crisis-response" element={<CrisisResponse />} />
+          <Route path="/family-conversations" element={<FamilyConversations />} />
+          <Route path="/resources" element={<Resources />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

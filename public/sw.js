@@ -1,7 +1,7 @@
 // Together We Talk - Privacy-First Service Worker
 // NO analytics, NO tracking, NO external requests
 
-const CACHE_NAME = 'together-we-talk-v1';
+const CACHE_NAME = 'together-we-talk-v2';
 const OFFLINE_URL = '/offline.html';
 
 // Files to cache for offline functionality
@@ -14,7 +14,14 @@ const STATIC_ASSETS = [
   // Main app routes that should work offline
   '/young-children',
   '/elementary', 
-  '/teens'
+  '/teens',
+  '/find-detained',
+  '/get-legal-help',
+  '/detention-rights',
+  '/safety-planning',
+  '/crisis-response',
+  '/family-conversations',
+  '/resources'
 ];
 
 // Install event - cache static assets

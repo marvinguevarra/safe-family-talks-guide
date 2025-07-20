@@ -119,6 +119,52 @@
     --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
     --shadow-hover: 0 8px 30px -6px hsl(0 0% 0% / 0.4);
   }
+
+  /* High Contrast Mode */
+  .high-contrast {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 60 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 100%;
+    --accent: 60 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 100%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 100%;
+  }
+
+  /* High contrast in dark mode */
+  .dark.high-contrast {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 60 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 100%;
+    --accent: 60 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 100%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 100%;
+  }
 }
 
 @layer base {
@@ -140,6 +186,42 @@
   h2 { font-size: 2rem; }
   h3 { font-size: 1.75rem; }
   h4 { font-size: 1.5rem; }
+
+  /* Font Size Accessibility Classes */
+  .font-small { font-size: 0.875rem; }
+  .font-medium { font-size: 1rem; }
+  .font-large { font-size: 1.125rem; }
+  .font-extra-large { font-size: 1.25rem; }
+
+  .font-small body { font-size: 0.875rem; }
+  .font-medium body { font-size: 1rem; }
+  .font-large body { font-size: 1.125rem; }
+  .font-extra-large body { font-size: 1.25rem; }
+
+  .font-small h1 { font-size: 2rem; }
+  .font-small h2 { font-size: 1.75rem; }
+  .font-small h3 { font-size: 1.5rem; }
+  .font-small h4 { font-size: 1.25rem; }
+
+  .font-large h1 { font-size: 2.75rem; }
+  .font-large h2 { font-size: 2.25rem; }
+  .font-large h3 { font-size: 2rem; }
+  .font-large h4 { font-size: 1.75rem; }
+
+  .font-extra-large h1 { font-size: 3rem; }
+  .font-extra-large h2 { font-size: 2.5rem; }
+  .font-extra-large h3 { font-size: 2.25rem; }
+  .font-extra-large h4 { font-size: 2rem; }
+
+  /* Line Spacing Classes */
+  .spacing-normal { line-height: 1.5; }
+  .spacing-relaxed { line-height: 1.75; }
+  .spacing-loose { line-height: 2; }
+
+  /* Dyslexia-friendly Font */
+  .dyslexia-font {
+    font-family: 'Comic Sans MS', 'Trebuchet MS', 'Verdana', cursive, sans-serif;
+  }
 }
 
 @layer components {

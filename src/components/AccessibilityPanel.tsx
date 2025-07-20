@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Settings, X, Sun, Moon, Type, Volume2, RotateCcw } from "lucide-react";
+import { useTheme } from "next-themes";
 
 export const AccessibilityPanel = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
   const [settings, setSettings] = useState({
-    darkMode: false,
     highContrast: false,
     fontSize: "medium",
     lineSpacing: "normal",
@@ -13,13 +14,50 @@ export const AccessibilityPanel = () => {
     readingSpeed: 1
   });
 
+  // Initialize default settings on component mount
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.add('font-medium', 'spacing-normal');
+  }, []);
+
+  // Apply accessibility settings to the document
+  useEffect(() => {
+    const root = document.documentElement;
+    
+    // Apply high contrast
+    if (settings.highContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
+
+    // Apply font size
+    root.classList.remove('font-small', 'font-medium', 'font-large', 'font-extra-large');
+    root.classList.add(`font-${settings.fontSize}`);
+
+    // Apply dyslexia font
+    if (settings.dyslexiaFont) {
+      root.classList.add('dyslexia-font');
+    } else {
+      root.classList.remove('dyslexia-font');
+    }
+
+    // Apply line spacing
+    root.classList.remove('spacing-normal', 'spacing-relaxed', 'spacing-loose');
+    root.classList.add(`spacing-${settings.lineSpacing}`);
+  }, [settings]);
+
   const updateSetting = (key: string, value: any) => {
     setSettings(prev => ({ ...prev, [key]: value }));
   };
 
+  const toggleDarkMode = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
   const resetSettings = () => {
+    setTheme('light');
     setSettings({
-      darkMode: false,
       highContrast: false,
       fontSize: "medium",
       lineSpacing: "normal",
@@ -27,6 +65,12 @@ export const AccessibilityPanel = () => {
       readAloud: false,
       readingSpeed: 1
     });
+    // Remove all accessibility classes
+    const root = document.documentElement;
+    root.classList.remove('high-contrast', 'dyslexia-font', 
+      'font-small', 'font-medium', 'font-large', 'font-extra-large',
+      'spacing-normal', 'spacing-relaxed', 'spacing-loose');
+    root.classList.add('font-medium', 'spacing-normal');
   };
 
   return (
@@ -61,20 +105,20 @@ export const AccessibilityPanel = () => {
                   Visual Settings
                 </h3>
                 
-                <div className="space-y-3">
-                  <label className="flex items-center justify-between">
-                    <span>Dark Mode</span>
-                    <button
-                      onClick={() => updateSetting("darkMode", !settings.darkMode)}
-                      className={`w-12 h-6 rounded-full transition-all duration-200 ${
-                        settings.darkMode ? "bg-primary" : "bg-muted"
-                      }`}
-                    >
-                      <div className={`w-5 h-5 bg-white rounded-full transition-transform duration-200 ${
-                        settings.darkMode ? "translate-x-7" : "translate-x-1"
-                      } mt-0.5`} />
-                    </button>
-                  </label>
+                 <div className="space-y-3">
+                   <label className="flex items-center justify-between">
+                     <span>Dark Mode</span>
+                     <button
+                       onClick={toggleDarkMode}
+                       className={`w-12 h-6 rounded-full transition-all duration-200 ${
+                         theme === 'dark' ? "bg-primary" : "bg-muted"
+                       }`}
+                     >
+                       <div className={`w-5 h-5 bg-white rounded-full transition-transform duration-200 ${
+                         theme === 'dark' ? "translate-x-7" : "translate-x-1"
+                       } mt-0.5`} />
+                     </button>
+                   </label>
 
                   <label className="flex items-center justify-between">
                     <span>High Contrast</span>
@@ -117,6 +161,25 @@ export const AccessibilityPanel = () => {
                           {size === "medium" && "M"}
                           {size === "large" && "L"}
                           {size === "extra-large" && "XL"}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Line Spacing</label>
+                    <div className="flex gap-2">
+                      {["normal", "relaxed", "loose"].map((spacing) => (
+                        <button
+                          key={spacing}
+                          onClick={() => updateSetting("lineSpacing", spacing)}
+                          className={`px-3 py-1 rounded-full text-sm transition-all duration-200 ${
+                            settings.lineSpacing === spacing
+                              ? "bg-primary text-primary-foreground"
+                              : "bg-muted hover:bg-muted/80"
+                          }`}
+                        >
+                          {spacing.charAt(0).toUpperCase() + spacing.slice(1)}
                         </button>
                       ))}
                     </div>

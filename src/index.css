@@ -261,7 +261,7 @@
 
   /* Quick Exit Button - Critical Safety Feature */
   .quick-exit {
-    @apply fixed top-4 right-4 z-50 px-4 py-2 rounded-full font-semibold text-sm;
+    @apply fixed bottom-4 left-4 z-50 px-4 py-2 rounded-full font-semibold text-sm;
     @apply transition-all duration-200 hover:scale-105;
     background: hsl(var(--exit-bg));
     color: hsl(var(--exit-fg));

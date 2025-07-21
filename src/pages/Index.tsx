@@ -1,8 +1,11 @@
 import { NavigationCard, NavigationLink } from "@/components/NavigationCard";
 import { Disclaimer } from "@/components/Disclaimer";
 import { Heart, Users, AlertTriangle, Shield } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { t } = useLanguage();
+  
   return (
     /* Main Content */
     <main className="container mx-auto px-4 pb-12">
@@ -12,78 +15,78 @@ const Index = () => {
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {/* Talking to Children */}
           <NavigationCard
-            title="Talking to Children"
-            description="Age-appropriate ways to discuss difficult family situations"
+            title={t.talkingToChildren.title}
+            description={t.talkingToChildren.description}
             emoji="👨‍👩‍👧‍👦"
             bgGradient="bg-gradient-warm"
           >
-            <NavigationLink to="/young-children" ageGroup="Ages 4-7">
-              Little Ones
+            <NavigationLink to="/young-children" ageGroup={t.talkingToChildren.ageRanges.littleOnes}>
+              {t.talkingToChildren.littleOnes}
             </NavigationLink>
-            <NavigationLink to="/elementary" ageGroup="Ages 8-11">
-              Elementary Age
+            <NavigationLink to="/elementary" ageGroup={t.talkingToChildren.ageRanges.elementary}>
+              {t.talkingToChildren.elementaryAge}
             </NavigationLink>
-            <NavigationLink to="/teens" ageGroup="Ages 12+">
-              Teenagers
+            <NavigationLink to="/teens" ageGroup={t.talkingToChildren.ageRanges.teens}>
+              {t.talkingToChildren.teenagers}
             </NavigationLink>
           </NavigationCard>
 
           {/* Talking to Family */}
           <NavigationCard
-            title="Talking to Family"
-            description="Having honest conversations with family members"
+            title={t.talkingToFamily.title}
+            description={t.talkingToFamily.description}
             emoji="💬"
             bgGradient="bg-gradient-sunset"
           >
             <NavigationLink to="/talk-to-parents">
-              Parents & Grandparents
+              {t.talkingToFamily.parentsGrandparents}
             </NavigationLink>
             <NavigationLink to="/talk-to-siblings">
-              Brothers & Sisters
+              {t.talkingToFamily.brothersSisters}
             </NavigationLink>
             <NavigationLink to="/talk-to-extended-family">
-              Extended Family
+              {t.talkingToFamily.extendedFamily}
             </NavigationLink>
           </NavigationCard>
 
           {/* Someone Was Detained */}
           <NavigationCard
-            title="Someone Was Detained"
-            description="Immediate steps when a family member is detained"
+            title={t.someoneDetained.title}
+            description={t.someoneDetained.description}
             emoji="🆘"
             bgGradient="bg-card"
           >
             <NavigationLink to="/find-detained">
               <AlertTriangle size={16} className="inline mr-2" />
-              Find Them
+              {t.someoneDetained.findThem}
             </NavigationLink>
             <NavigationLink to="/get-legal-help">
-              Get Legal Help
+              {t.someoneDetained.getLegalHelp}
             </NavigationLink>
             <NavigationLink to="/detention-rights">
-              Know Your Rights
+              {t.someoneDetained.knowYourRights}
             </NavigationLink>
           </NavigationCard>
 
           {/* Family Preparedness */}
           <NavigationCard
-            title="Family Preparedness"
-            description="Planning ahead to keep your family safe and informed"
+            title={t.familyPreparedness.title}
+            description={t.familyPreparedness.description}
             emoji="🛡️"
             bgGradient="bg-sage"
           >
             <NavigationLink to="/safety-planning">
               <Shield size={16} className="inline mr-2" />
-              Make a Safety Plan
+              {t.familyPreparedness.makeSafetyPlan}
             </NavigationLink>
             <NavigationLink to="/know-your-rights">
-              Know Your Rights
+              {t.familyPreparedness.knowYourRights}
             </NavigationLink>
             <NavigationLink to="/educators">
-              Talk to Teachers
+              {t.familyPreparedness.talkToTeachers}
             </NavigationLink>
             <NavigationLink to="/allies">
-              Find Community Support
+              {t.familyPreparedness.findCommunitySupport}
             </NavigationLink>
           </NavigationCard>
         </div>
@@ -92,40 +95,38 @@ const Index = () => {
         <div className="content-card text-center">
           <h2 className="text-2xl font-semibold mb-4 flex items-center justify-center gap-2">
             <Users size={24} />
-            You Are Not Alone
+            {t.youAreNotAlone}
           </h2>
           <p className="text-lg leading-relaxed">
-            This resource was created with love by families who understand what you're going through. 
-            Every conversation matters, every family deserves support, and together we can help 
-            each other through difficult times.
+            {t.supportMessage}
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             <button 
               onClick={() => window.print()}
               className="btn-sage no-print"
             >
-              📄 Print This Guide
+              {t.printGuide}
             </button>
             <button className="btn-primary">
-              💝 Share Resources
+              {t.shareResources}
             </button>
           </div>
         </div>
 
         {/* Installation Prompt */}
         <div className="content-card bg-gradient-warm text-center text-white">
-          <h3 className="text-xl font-semibold mb-3 text-white">📱 Use Offline</h3>
+          <h3 className="text-xl font-semibold mb-3 text-white">{t.useOffline}</h3>
           <p className="mb-4 text-white/90 font-medium">
-            Install this app on your phone for private, offline access anytime.
+            {t.installMessage}
           </p>
           <button 
             className="bg-white text-black px-6 py-3 rounded-[20px] font-semibold hover:bg-white/90 transition-all duration-200"
             onClick={() => {
               // PWA install prompt will be handled by service worker
-              alert("To install: tap your browser menu and select 'Add to Home Screen'");
+              alert(t.installInstructions);
             }}
           >
-            Install App
+            {t.installApp}
           </button>
         </div>
       </main>

@@ -1,18 +1,18 @@
-import { useState } from "react";
 import { Globe } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const LanguageToggle = () => {
-  const [language, setLanguage] = useState<"en" | "es">("en");
+  const { language, setLanguage, t } = useLanguage();
 
   const toggleLanguage = () => {
-    setLanguage(prev => prev === "en" ? "es" : "en");
+    setLanguage(language === "en" ? "es" : "en");
   };
 
   return (
     <button
       onClick={toggleLanguage}
       className="language-toggle"
-      aria-label={`Switch to ${language === "en" ? "Spanish" : "English"}`}
+      aria-label={t.switchLanguageLabel}
     >
       <Globe size={20} />
       <span className="font-semibold">

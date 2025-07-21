@@ -3,12 +3,15 @@ import { LanguageToggle } from "@/components/LanguageToggle";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
 import { Heart } from "lucide-react";
 import { ReactNode } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface LayoutProps {
   children: ReactNode;
 }
 
 export const Layout = ({ children }: LayoutProps) => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen bg-gradient-gentle">
       {/* Critical Safety Features */}
@@ -22,15 +25,14 @@ export const Layout = ({ children }: LayoutProps) => {
             <div className="flex items-center gap-3">
               <Heart className="text-secondary" size={32} />
               <h1 className="text-3xl md:text-4xl font-bold bg-gradient-warm bg-clip-text text-transparent animate-gentle-bounce">
-                Together We Talk
+                {t.appTitle}
               </h1>
             </div>
             <LanguageToggle />
           </div>
           
           <p className="text-lg text-foreground/80 text-center max-w-2xl mx-auto font-medium">
-            A safe space for families to navigate difficult conversations with love, 
-            understanding, and practical guidance.
+            {t.appSubtitle}
           </p>
         </div>
       </header>

@@ -1,5 +1,5 @@
-// Together We Talk - Secure Service Worker
-// Privacy-first with enhanced security measures
+// Together We Talk - Simple Service Worker
+// NO caching, NO offline functionality - just basic PWA registration
 
 // Install event - skip waiting immediately
 self.addEventListener('install', (event) => {
@@ -23,27 +23,9 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch event - security-enhanced request handling
+// Fetch event - let everything go through the network normally
 self.addEventListener('fetch', (event) => {
-  // Security: Only handle same-origin requests
-  const url = new URL(event.request.url);
-  
-  // Block non-HTTPS requests in production (except localhost)
-  if (url.protocol !== 'https:' && 
-      !url.hostname.includes('localhost') && 
-      !url.hostname.includes('127.0.0.1')) {
-    event.respondWith(new Response('HTTPS required', { status: 400 }));
-    return;
-  }
-  
-  // Block requests to suspicious domains
-  const blockedDomains = ['doubleclick.net', 'googleadservices.com', 'facebook.com'];
-  if (blockedDomains.some(domain => url.hostname.includes(domain))) {
-    event.respondWith(new Response('Blocked', { status: 204 }));
-    return;
-  }
-  
-  // Let valid requests go through normally
+  // Don't intercept any requests - let them go through normally
   return;
 });
 

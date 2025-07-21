@@ -6,44 +6,44 @@
 
 @layer base {
   :root {
-    /* Warm, calming color palette for family support */
+    /* Simplified two-color system: Dark text for light mode */
     --background: 44 50% 97%;  /* Cream background #FFF5E4 */
-    --foreground: 220 30% 20%; /* Dark text for readability */
+    --foreground: 220 30% 15%; /* Dark text for maximum readability */
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 20%;
+    --card-foreground: 220 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 20%;
+    --popover-foreground: 220 30% 15%;
 
     /* Sky Blue primary - calming and trustworthy */
     --primary: 195 53% 79%;     /* Sky Blue #87CEEB */
-    --primary-foreground: 220 30% 20%;
+    --primary-foreground: 220 30% 15%; /* Dark text on light backgrounds */
 
     /* Warm Coral secondary - welcoming */
     --secondary: 3 100% 70%;    /* Warm Coral #FF6B6B */
-    --secondary-foreground: 0 0% 100%;
+    --secondary-foreground: 220 30% 15%; /* Dark text on light backgrounds */
 
     /* Sage Green for success/safety */
     --sage: 162 69% 35%;        /* Darker Sage Green for proper contrast */
-    --sage-foreground: 0 0% 100%;
+    --sage-foreground: 220 30% 15%; /* Dark text on light backgrounds */
 
     /* Soft Purple for gentle emphasis */
     --purple: 265 56% 45%;      /* Darker Purple for proper contrast */
-    --purple-foreground: 0 0% 100%;
+    --purple-foreground: 220 30% 15%; /* Dark text on light backgrounds */
 
     /* Sunshine for positivity */
     --sunshine: 50 100% 62%;    /* Sunshine #FFD93D */
-    --sunshine-foreground: 220 30% 20%;
+    --sunshine-foreground: 220 30% 15%; /* Dark text on light backgrounds */
 
     --muted: 210 40% 92%;
-    --muted-foreground: 215.4 16.3% 35%; /* Darker for WCAG compliance */
+    --muted-foreground: 220 30% 15%; /* Dark text for light mode */
 
     --accent: 162 69% 71%;      /* Using sage as accent */
-    --accent-foreground: 220 30% 20%;
+    --accent-foreground: 220 30% 15%; /* Dark text for light mode */
 
     --destructive: 3 100% 70%;   /* Using coral for warnings */
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 220 30% 15%; /* Dark text for light mode */
 
     --border: 210 20% 90%;
     --input: 210 20% 95%;
@@ -75,38 +75,39 @@
   }
 
   .dark {
+    /* Simplified two-color system: Light text for dark mode */
     --background: 220 30% 10%;
-    --foreground: 44 50% 97%;
+    --foreground: 44 50% 95%; /* Light text for maximum readability */
 
     --card: 220 30% 15%;
-    --card-foreground: 44 50% 97%;
+    --card-foreground: 44 50% 95%;
 
     --popover: 220 30% 15%;
-    --popover-foreground: 44 50% 97%;
+    --popover-foreground: 44 50% 95%;
 
     --primary: 195 53% 79%;
-    --primary-foreground: 220 30% 10%;
+    --primary-foreground: 44 50% 95%; /* Light text on dark backgrounds */
 
     --secondary: 3 100% 70%;
-    --secondary-foreground: 220 30% 10%;
+    --secondary-foreground: 44 50% 95%; /* Light text on dark backgrounds */
 
     --sage: 162 69% 71%;
-    --sage-foreground: 220 30% 10%;
+    --sage-foreground: 44 50% 95%; /* Light text on dark backgrounds */
 
     --purple: 265 56% 81%;
-    --purple-foreground: 220 30% 10%;
+    --purple-foreground: 44 50% 95%; /* Light text on dark backgrounds */
 
     --sunshine: 50 100% 62%;
-    --sunshine-foreground: 220 30% 10%;
+    --sunshine-foreground: 44 50% 95%; /* Light text on dark backgrounds */
 
     --muted: 220 30% 25%;
-    --muted-foreground: 210 20% 80%; /* Lighter for dark mode contrast */
+    --muted-foreground: 44 50% 95%; /* Light text for dark mode */
 
     --accent: 162 69% 71%;
-    --accent-foreground: 220 30% 10%;
+    --accent-foreground: 44 50% 95%; /* Light text for dark mode */
 
     --destructive: 3 100% 70%;
-    --destructive-foreground: 220 30% 10%;
+    --destructive-foreground: 44 50% 95%; /* Light text for dark mode */
 
     --border: 220 30% 25%;
     --input: 220 30% 20%;

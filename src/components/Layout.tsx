@@ -1,5 +1,5 @@
 import { QuickExit } from "@/components/QuickExit";
-import { LanguageToggle } from "@/components/LanguageToggle";
+import { LanguageDropdown } from "@/components/LanguageDropdown";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
 import { Heart } from "lucide-react";
 import { ReactNode } from "react";
@@ -28,7 +28,7 @@ export const Layout = ({ children }: LayoutProps) => {
                 {t.appTitle}
               </h1>
             </div>
-            <LanguageToggle />
+            <LanguageDropdown />
           </div>
           
           <p className="text-lg text-foreground/80 text-center max-w-2xl mx-auto font-medium">

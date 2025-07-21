@@ -8,42 +8,42 @@
   :root {
     /* Simplified two-color system: Dark text for light mode */
     --background: 44 50% 97%;  /* Cream background #FFF5E4 */
-    --foreground: 220 30% 15%; /* Dark text for maximum readability */
+    --foreground: 220 50% 10%; /* Very dark text for maximum readability */
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 15%;
+    --card-foreground: 220 50% 10%; /* Very dark text */
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 15%;
+    --popover-foreground: 220 50% 10%; /* Very dark text */
 
     /* Sky Blue primary - calming and trustworthy */
     --primary: 195 53% 79%;     /* Sky Blue #87CEEB */
-    --primary-foreground: 220 30% 15%; /* Dark text on light backgrounds */
+    --primary-foreground: 220 50% 10%; /* Very dark text on light backgrounds */
 
     /* Warm Coral secondary - welcoming */
     --secondary: 3 100% 70%;    /* Warm Coral #FF6B6B */
-    --secondary-foreground: 220 30% 15%; /* Dark text on light backgrounds */
+    --secondary-foreground: 220 50% 10%; /* Very dark text on light backgrounds */
 
     /* Sage Green for success/safety */
     --sage: 162 69% 35%;        /* Darker Sage Green for proper contrast */
-    --sage-foreground: 220 30% 15%; /* Dark text on light backgrounds */
+    --sage-foreground: 220 50% 10%; /* Very dark text on light backgrounds */
 
     /* Soft Purple for gentle emphasis */
     --purple: 265 56% 45%;      /* Darker Purple for proper contrast */
-    --purple-foreground: 220 30% 15%; /* Dark text on light backgrounds */
+    --purple-foreground: 220 50% 10%; /* Very dark text on light backgrounds */
 
     /* Sunshine for positivity */
     --sunshine: 50 100% 62%;    /* Sunshine #FFD93D */
-    --sunshine-foreground: 220 30% 15%; /* Dark text on light backgrounds */
+    --sunshine-foreground: 220 50% 10%; /* Very dark text on light backgrounds */
 
     --muted: 210 40% 92%;
-    --muted-foreground: 220 30% 15%; /* Dark text for light mode */
+    --muted-foreground: 220 50% 10%; /* Very dark text for light mode */
 
     --accent: 162 69% 71%;      /* Using sage as accent */
-    --accent-foreground: 220 30% 15%; /* Dark text for light mode */
+    --accent-foreground: 220 50% 10%; /* Very dark text for light mode */
 
     --destructive: 3 100% 70%;   /* Using coral for warnings */
-    --destructive-foreground: 220 30% 15%; /* Dark text for light mode */
+    --destructive-foreground: 220 50% 10%; /* Very dark text for light mode */
 
     --border: 210 20% 90%;
     --input: 210 20% 95%;

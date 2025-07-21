@@ -24,7 +24,12 @@ export const LanguageDropdown = () => {
           <SelectValue placeholder={t.selectLanguage} />
         </div>
       </SelectTrigger>
-      <SelectContent className="bg-background border-sage">
+      <SelectContent 
+        className="bg-background border-sage z-50" 
+        position="popper"
+        side="bottom"
+        align="end"
+      >
         {languages.map((lang) => (
           <SelectItem 
             key={lang.code} 

@@ -25,5 +25,10 @@
   "categories": ["health", "lifestyle", "social"],
   "lang": "en-US",
   "dir": "ltr",
-  "prefer_related_applications": false
+  "prefer_related_applications": false,
+  "protocol_handlers": [],
+  "edge_side_panel": {},
+  "launch_handler": {
+    "client_mode": "navigate-new"
+  }
 }

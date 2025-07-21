@@ -1,15 +1,5 @@
-// Together We Talk - Secure Service Worker
-// Privacy-first service worker with security enhancements
-
-// Security headers for service worker responses
-const SECURITY_HEADERS = {
-  'X-Frame-Options': 'DENY',
-  'X-Content-Type-Options': 'nosniff',
-  'Referrer-Policy': 'no-referrer',
-  'Cross-Origin-Embedder-Policy': 'require-corp',
-  'Cross-Origin-Opener-Policy': 'same-origin',
-  'Cross-Origin-Resource-Policy': 'same-origin'
-};
+// Together We Talk - Simple Service Worker
+// NO caching, NO offline functionality - just basic PWA registration
 
 // Install event - skip waiting immediately
 self.addEventListener('install', (event) => {
@@ -33,37 +23,10 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch event - add security headers and validate requests
+// Fetch event - let everything go through the network normally
 self.addEventListener('fetch', (event) => {
-  // Only handle same-origin requests for security
-  if (!event.request.url.startsWith(self.location.origin)) {
-    return;
-  }
-  
-  // Add security headers to responses
-  event.respondWith(
-    fetch(event.request).then(response => {
-      // Clone the response to modify headers
-      const newHeaders = new Headers(response.headers);
-      
-      // Add security headers
-      Object.entries(SECURITY_HEADERS).forEach(([key, value]) => {
-        newHeaders.set(key, value);
-      });
-      
-      return new Response(response.body, {
-        status: response.status,
-        statusText: response.statusText,
-        headers: newHeaders
-      });
-    }).catch(() => {
-      // Return a secure error response
-      return new Response('Network Error', {
-        status: 503,
-        headers: SECURITY_HEADERS
-      });
-    })
-  );
+  // Don't intercept any requests - let them go through normally
+  return;
 });
 
 // Message event - handle commands from main thread

@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,7 +38,7 @@
     --sunshine-foreground: 220 30% 20%;
 
     --muted: 210 40% 92%;
-    --muted-foreground: 215.4 16.3% 35%; /* Darker for WCAG compliance */
+    --muted-foreground: 220 30% 50%; /* Muted text - darker than foreground but still readable */
 
     --accent: 162 69% 71%;      /* Using sage as accent */
     --accent-foreground: 220 30% 20%;
@@ -76,7 +77,7 @@
 
   .dark {
     --background: 220 30% 10%;
-    --foreground: 44 50% 97%;
+    --foreground: 44 50% 97%;    /* Light text for dark mode */
 
     --card: 220 30% 15%;
     --card-foreground: 44 50% 97%;
@@ -100,7 +101,7 @@
     --sunshine-foreground: 220 30% 10%;
 
     --muted: 220 30% 25%;
-    --muted-foreground: 210 20% 80%; /* Lighter for dark mode contrast */
+    --muted-foreground: 44 50% 70%; /* Muted text - dimmed but still readable in dark mode */
 
     --accent: 162 69% 71%;
     --accent-foreground: 220 30% 10%;

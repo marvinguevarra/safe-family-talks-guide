@@ -1,22 +1,8 @@
-import { ArrowLeft, Users } from "lucide-react";
-import { Link } from "react-router-dom";
-import { QuickExit } from "@/components/QuickExit";
-import { AccessibilityPanel } from "@/components/AccessibilityPanel";
+import { Users } from "lucide-react";
 
 const Teens = () => {
   return (
-    <div className="min-h-screen bg-gradient-gentle">
-      <QuickExit />
-      <AccessibilityPanel />
-      
-      <div className="container mx-auto px-4 py-8">
-        <Link 
-          to="/" 
-          className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-6"
-        >
-          <ArrowLeft size={20} />
-          Back to Home
-        </Link>
+    <div className="container mx-auto px-4 py-8">
 
         <div className="content-card">
           <div className="flex items-center gap-3 mb-6">
@@ -110,8 +96,7 @@ const Teens = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  };
 
-export default Teens;
+  export default Teens;

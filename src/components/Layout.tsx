@@ -1,9 +1,10 @@
 import { QuickExit } from "@/components/QuickExit";
 import { LanguageDropdown } from "@/components/LanguageDropdown";
 import { AccessibilityPanel } from "@/components/AccessibilityPanel";
-import { Heart } from "lucide-react";
+import { Heart, ArrowLeft } from "lucide-react";
 import { ReactNode } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useLocation, Link } from "react-router-dom";
 
 interface LayoutProps {
   children: ReactNode;
@@ -11,6 +12,8 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
   const { t } = useLanguage();
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
   
   return (
     <div className="min-h-screen bg-gradient-gentle">
@@ -31,9 +34,23 @@ export const Layout = ({ children }: LayoutProps) => {
             <LanguageDropdown />
           </div>
           
-          <p className="text-lg text-foreground/80 text-center max-w-2xl mx-auto font-medium">
-            {t.appSubtitle}
-          </p>
+          {/* Show Back to Home button on child pages */}
+          {!isHomePage && (
+            <Link 
+              to="/" 
+              className="inline-flex items-center gap-2 text-sage hover:text-sage/80 transition-colors font-semibold"
+            >
+              <ArrowLeft size={20} />
+              {t.backToHome}
+            </Link>
+          )}
+          
+          {/* Show subtitle only on home page */}
+          {isHomePage && (
+            <p className="text-lg text-foreground/80 text-center max-w-2xl mx-auto font-medium">
+              {t.appSubtitle}
+            </p>
+          )}
         </div>
       </header>
 

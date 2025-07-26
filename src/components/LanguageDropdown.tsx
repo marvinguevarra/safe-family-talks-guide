@@ -17,7 +17,6 @@ export const LanguageDropdown = () => {
   ];
 
   const handleValueChange = (value: string) => {
-    console.log("Language dropdown: changing language to", value);
     setLanguage(value as "en" | "es");
   };
 
